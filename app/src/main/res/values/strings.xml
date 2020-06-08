@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="detailview_description_label">Beschreibung des ToDo</string>
+    <string name="detailview_main_label">Name des Todo</string>
+</resources>

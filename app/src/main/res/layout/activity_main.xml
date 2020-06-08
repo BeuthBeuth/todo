@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/viewRoot"
+    tools:context="com.example.todo.MainActivity">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/welcomeMessage"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Welcome to MAD S20!"-->
+    <!--        android:textSize="20dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/listView"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+    <!--        <TextView-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textSize="30dp"-->
+    <!--            android:text="Lorem"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"/>-->
+    <!--        <TextView-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textSize="30dp"-->
+    <!--            android:text="Ipsum"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"/>-->
+    <!--        <TextView-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textSize="30dp"-->
+    <!--            android:text="dolor"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"/>-->
+    <!--        <TextView-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textSize="30dp"-->
+    <!--            android:text="sit"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"/>-->
+    <!--        <TextView-->
+    <!--            android:padding="10dp"-->
+    <!--            android:textSize="30dp"-->
+    <!--            android:text="amet"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="70dp"/>-->
+    <!--    </LinearLayout>-->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/baseline_add_white_24dp"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

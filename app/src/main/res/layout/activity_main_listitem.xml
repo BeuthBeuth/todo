@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="item"
+            type="com.example.model.ToDo" />
+        <variable
+            name="controller"
+            type="com.example.todo.MainActivity" />
+    </data>
+    <LinearLayout
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <CheckBox
+            android:focusable="false"
+            android:checked="@={item.done}"
+            android:onClick="@{() -> controller.onListItemChangedInList(item)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="@{String.valueOf(item.id)}"
+            android:id="@+id/itemId"
+            android:padding="10dp"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"/>
+        <TextView
+            android:text="@{item.name}"
+            android:id="@+id/itemName"
+            android:padding="10dp"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"/>
+    </LinearLayout>
+</layout>
