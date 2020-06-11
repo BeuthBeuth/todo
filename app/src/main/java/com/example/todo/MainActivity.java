@@ -1,8 +1,11 @@
 package com.example.todo;
 
 import android.app.Activity;
+
 import android.content.Intent;
+
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +24,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import com.example.model.IToDoCRUDOperations;
+
 import com.example.model.RetrofitToDoCRUDOperationsImpl;
 import com.example.todo.databinding.ActivityMainListitemBinding;
 import com.example.tasks.CreateToDoTask;
@@ -48,16 +52,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        this.crudOperations = new RetrofitToDoCRUDOperationsImpl();//new RoomToDoCRUDOperationsImpl(this); //SimpleDataItemCRUDOperationsImpl();
+        ((ToDoApplication) getApplication())
+                .verifyWebappAvailable(available -> {
+                    this.initialiseView();
+                }
+        );
+
+    }
+
+    private void initialiseView() {
+
+        this.crudOperations = ((ToDoApplication)getApplication()).getCrudOperations();//new RetrofitToDoCRUDOperationsImpl();//new RoomToDoCRUDOperationsImpl(this); //SimpleDataItemCRUDOperationsImpl();
 
         this.listView = this.findViewById( R.id.listView );
         this.fab = this.findViewById( R.id.fab );
-
         this.progressBar = findViewById(R.id.progressBar);
-
 
         this.listViewAdapter = new ArrayAdapter<ToDo>( this, R.layout.activity_main_listitem, R.id.itemName ) {
 
@@ -160,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
                 existingItem.setName(changedItem.getName());
                 existingItem.setDone(changedItem.isDone());
                 existingItem.setDescription(changedItem.getDescription());
+                existingItem.setContacts(changedItem.getContacts());
                 this.listViewAdapter.notifyDataSetChanged();
             }
             else {
