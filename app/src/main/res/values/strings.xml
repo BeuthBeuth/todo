@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">ToDo</string>
-    <string name="detailview_description_label">Beschreibung des ToDo</string>
-    <string name="detailview_main_label">Name des Todo</string>
+    <string name="toast_message">Ausgewählt: %s</string>
+    <string name="todoNameLabel">Name</string>
+    <string name="todoDescriptionLabel">Beschreibung</string>
+    <string name="title_activity_login">Login</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">E-Mail</string>
+    <string name="prompt_password">Passwort</string>
+    <string name="action_sign_in">Log in</string>
+    <string name="action_sign_in_short">Log in</string>
+    <string name="error_invalid_email">Ungültige E-Mail-Adresse!</string>
+    <string name="error_invalid_password">Ungültiges Passwort!</string>
+    <string name="error_incorrect_password">Falsches Passwort</string>
+    <string name="error_field_required">Eingabe erforderlich!</string>
+    <string name="permission_rationale">"Zugriff auf die Kontakte ist nötig für die E-Mail-Funktion!"
+    </string>
+
 </resources>

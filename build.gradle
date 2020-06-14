@@ -5,11 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        def nav_version = "2.3.0-alpha02"
-        classpath 'com.android.tools.build:gradle:3.6.1'
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
-        // this is used for firebase
-        classpath "com.google.gms:google-services:4.3.3"
+        classpath 'com.android.tools.build:gradle:3.1.3'
     }
 }
 

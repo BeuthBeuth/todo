@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/contactEmail"
+        android:title="Email" />
+    <item android:id="@+id/contactSms"
+        android:title="SMS" />
+    <item android:id="@+id/contactDelete"
+        android:src="@drawable/ic_delete_forever_white_24dp"
+        android:title="DELETE" />
+
+</menu>

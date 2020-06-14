@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="SORT"
+        android:icon="@drawable/ic_sort_variant_white_24dp"
+        android:id="@+id/sortTodos"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/contactEmail"
+        android:title="Lokale Todos löschen" />
+    <item android:id="@+id/contactSms"
+        android:title="Todos auf dem Server löschen" />
+    <item android:id="@+id/contactDelete"
+        android:src="@drawable/ic_delete_forever_white_24dp"
+        android:title="Aktualisieren" />
+    <item android:id="@+id/contactDelete"
+        android:src="@drawable/ic_delete_forever_white_24dp"
+        android:checkable="true"
+        android:title="Erledigte Todos ausblenden" />
+
+</menu>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#32cd32</color>
-    <color name="colorPrimaryDark">#239023</color>
-    <color name="colorAccent">#cd3232</color>
+    <color name="colorPrimary">#768998</color>
+    <color name="colorPrimaryDark">#3B4F5E</color>
+    <color name="colorAccent">#1EB1C8</color>
+    <color name="outDatedTodoBackground">#C69EAB</color>
+    <color name="todoBackground">#D1E1E2</color>
+    <color name="contactBackground">#D1E1E2</color>
+    <color name="listviewBackground">#D1E1E2</color>
+    <color name="colorDanger">#D1E1E2</color>
+
 </resources>
