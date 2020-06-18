@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.carstenbrauer.todo;
 
 import android.content.Context;
 

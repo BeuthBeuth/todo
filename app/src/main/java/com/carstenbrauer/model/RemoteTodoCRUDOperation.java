@@ -1,4 +1,4 @@
-package com.example.model;
+package com.carstenbrauer.model;
 
 
 import java.io.IOException;
@@ -42,7 +42,7 @@ public class RemoteTodoCRUDOperation implements ITodoCRUDOperation {
     public RemoteTodoCRUDOperation() {
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8080")
+                .baseUrl("http://192.168.178.115:8080")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

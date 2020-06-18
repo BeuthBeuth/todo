@@ -1,4 +1,4 @@
-package com.example.model;
+package com.carstenbrauer.model;
 
 
 import android.icu.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.carstenbrauer.todo;
 
 
 import android.animation.Animator;
@@ -34,8 +34,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.model.ITodoCRUDOperationAsync;
-import com.example.model.User;
+import com.carstenbrauer.model.ITodoCRUDOperationAsync;
+import com.carstenbrauer.model.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -360,7 +360,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected Boolean doInBackground(Void... params) {
 
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://10.0.2.2:8080")
+                    .baseUrl("http://192.168.178.115:8080")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 

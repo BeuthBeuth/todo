@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="clip_vertical"
-    android:padding="20dp">
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:weightSum="1">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="0.7"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/itemName"
-            android:maxWidth="260dp"
-            android:minWidth="260dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:breakStrategy="high_quality"/>
 
         <TextView
             android:id="@+id/itemExpiry"
@@ -29,8 +30,9 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="0.3"
         android:orientation="vertical">
 
         <LinearLayout
@@ -38,34 +40,35 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <Switch
-            android:id="@+id/todoFavourite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:focusable="false"
-            android:showText="false" />
+            <Switch
+                android:id="@+id/todoFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:showText="false" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Favorit" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorit"
+                android:breakStrategy="simple"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/todoDone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:focusable="false" />
+            <CheckBox
+                android:id="@+id/todoDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="58dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Erledigt"
                 android:textAlignment="viewEnd" />

@@ -1,14 +1,14 @@
-package com.example.todo;
+package com.carstenbrauer.todo;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
-import com.example.model.ITodoCRUDOperation;
-import com.example.model.ITodoCRUDOperationAsync;
-import com.example.model.LocalTodoCRUDOperation;
-import com.example.model.RemoteTodoCRUDOperation;
-import com.example.model.SyncedTodoCRUDOperation;
-import com.example.model.Todo;
+import com.carstenbrauer.model.ITodoCRUDOperation;
+import com.carstenbrauer.model.ITodoCRUDOperationAsync;
+import com.carstenbrauer.model.LocalTodoCRUDOperation;
+import com.carstenbrauer.model.RemoteTodoCRUDOperation;
+import com.carstenbrauer.model.SyncedTodoCRUDOperation;
+import com.carstenbrauer.model.Todo;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -129,7 +129,7 @@ public class TodoApplication extends Application implements ITodoCRUDOperationAs
             protected CRUDStatus doInBackground(Void... voids) {
 
                 try {
-                    HttpURLConnection httpURLConnection = (HttpURLConnection) new URL("http://10.0.2.2:8080").openConnection();
+                    HttpURLConnection httpURLConnection = (HttpURLConnection) new URL("http://192.168.178.115:8080").openConnection();
                     httpURLConnection.setRequestMethod("GET");
                     httpURLConnection.setDoInput(true);
                     httpURLConnection.setConnectTimeout(1000);

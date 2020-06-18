@@ -1,4 +1,4 @@
-package com.example.model;
+package com.carstenbrauer.model;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

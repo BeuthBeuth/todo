@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.carstenbrauer.todo;
 
 import android.Manifest;
 import android.app.DatePickerDialog;
@@ -28,12 +28,11 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
-import java.util.Locale;
 
-import com.example.todo.databinding.ActivityDetailviewBinding;
-import com.example.model.ITodoCRUDOperationAsync;
-import com.example.model.Todo;
-import com.example.view.DetailviewActions;
+import com.carstenbrauer.todo.databinding.ActivityDetailviewBinding;
+import com.carstenbrauer.model.ITodoCRUDOperationAsync;
+import com.carstenbrauer.model.Todo;
+import com.carstenbrauer.view.DetailviewActions;
 
 public class DetailviewActivity extends AppCompatActivity implements DetailviewActions{
 
@@ -234,19 +233,19 @@ public class DetailviewActivity extends AppCompatActivity implements DetailviewA
                             case R.id.contactEmail:
                                 String email = getContactEmail(id);
                                 if (email != null) {
-                                    composeEmail(DetailviewActivity.this, "TODO: " + todo.getName(),  " " + "DESCRIPTION: " + todo.getDescription(), "bla@aol.com", email);
+                                    composeEmail(DetailviewActivity.this, "Todo: " + todo.getName(),  " " + "Beschreibung: " + todo.getDescription(), "alfred.e@neumann.com", email);
                                 }
                                 else {
-                                    Toast.makeText(DetailviewActivity.this,"no email" , Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DetailviewActivity.this,"Keine E-Mail-Adresse vorhanden" , Toast.LENGTH_SHORT).show();
                                 }
                                 break;
                             case R.id.contactSms:
                                 String phoneNumber = getContactPhone(id);
                                 if (phoneNumber != null) {
-                                    composeSMS(phoneNumber, "TODO: " + todo.getName() + " " + "DESCRIPTION: " + todo.getDescription());
+                                    composeSMS(phoneNumber, "Todo: " + todo.getName() + " " + "Beschreibung: " + todo.getDescription());
                                 }
                                 else {
-                                    Toast.makeText(DetailviewActivity.this,"no mobile phonenumber" , Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DetailviewActivity.this,"Keine TElefonnummer vorhanden" , Toast.LENGTH_SHORT).show();
                                 }
                                 break;
                         }

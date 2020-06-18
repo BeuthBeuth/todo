@@ -7,10 +7,10 @@
     <data>
         <variable
             name="todo"
-            type="com.example.model.Todo"/>
+            type="com.carstenbrauer.model.Todo"/>
         <variable
             name="actions"
-            type="com.example.view.DetailviewActions"/>
+            type="com.carstenbrauer.view.DetailviewActions"/>
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -83,10 +83,11 @@
 
         <ScrollView
             android:id="@+id/scrollView"
+            style="@android:style/Widget.DeviceDefault.ScrollView"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@color/colorDanger"
-            android:scrollbarStyle="insideInset"
+            android:scrollbarStyle="insideOverlay"
             app:layout_constraintTop_toBottomOf="@id/todoDateContainer"
             tools:layout_editor_absoluteX="10dp">
 
